@@ -6,3 +6,17 @@ img {
     right: 0;
     bottom: 0;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    width: 50vw;
+    height: 50vw;
+}
+.container img
+{
+    max-width:100%;
+    max-height:100%;
+}
