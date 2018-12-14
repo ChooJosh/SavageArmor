@@ -12,7 +12,8 @@
     width:100%;
 }
 #fwslider .slide img {
-    width:100%;
+width: 100%;
+	object-fit: fill;
 }
 #fwslider .slidePrev {
   	position: absolute;
