@@ -10,7 +10,7 @@
  */
 
 // Force redirect to anchor
-window.location.href="#home";
+window.location.href="#slide-1";
 
 // All images are from https://unsplash.com/
 
