@@ -8,6 +8,12 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
+
+// Force redirect to anchor
+window.location.href="#slide-1";
+
+// All images are from https://unsplash.com/
+
 ;( function( window ) {
 	
 	'use strict';

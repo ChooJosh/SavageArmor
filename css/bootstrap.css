@@ -314,7 +314,6 @@ img {
 .carousel-inner > .item > a > img {
   display: block;
   max-width: 100%;
-  height: auto;
 }
 .img-rounded {
   border-radius: 6px;
@@ -566,6 +565,7 @@ a.bg-danger:hover {
   padding-bottom: 9px;
   margin: 40px 0 20px;
   border-bottom: 1px solid #eee;
+
 }
 ul,
 ol {
@@ -738,6 +738,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+	wid
 }
 @media (min-width: 768px) {
   .container {
@@ -5424,10 +5425,12 @@ button.close {
   display: none;
   -webkit-transition: .6s ease-in-out left;
           transition: .6s ease-in-out left;
+	
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   line-height: 1;
+	
 }
 .carousel-inner > .active,
 .carousel-inner > .next,
