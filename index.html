@@ -1,381 +1,223 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>SavageArmor</title>
-<link rel = "shortcut icon" type = "image/png" href = "images/fav.png">
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="js/jquery.min.js"></script>
-<!--<script src="js/jquery.easydropdown.js"></script>-->
-<!--start slider -->
-<link rel="stylesheet" href="css/fwslider.css" media="all">
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/fwslider.js"></script>
-<!--end slider -->
-<script type="text/javascript">
-        $(document).ready(function() {
-            $(".dropdown img.flag").addClass("flagvisibility");
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SavageArmor</title>
 
-            $(".dropdown dt a").click(function() {
-                $(".dropdown dd ul").toggle();
-            });
-                        
-            $(".dropdown dd ul li a").click(function() {
-                var text = $(this).html();
-                $(".dropdown dt a span").html(text);
-                $(".dropdown dd ul").hide();
-                $("#result").html("Selected value is: " + getSelectedValue("sample"));
-            });
-                        
-            function getSelectedValue(id) {
-                return $("#" + id).find("dt a span.value").html();
-            }
-
-            $(document).bind('click', function(e) {
-                var $clicked = $(e.target);
-                if (! $clicked.parents().hasClass("dropdown"))
-                    $(".dropdown dd ul").hide();
-            });
+<link rel = "shortcut icon" type = "image/png" href = "images/nobg.png">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Rubik:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
 
-            $("#flagSwitcher").click(function() {
-                $(".dropdown img.flag").toggleClass("flagvisibility");
-            });
-        });
-     </script>
-    <style>
-* {
-  box-sizing: border-box;
-}
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 1%;
-justify-content: center;
-    display: block;
-}
+  <!-- START: header -->
 
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-</style>
-</head>
-<body>
-	<div class="header">
-		<div class="container">
-			<div class="row">
-			  <div class="col-md-12">
-				 <div class="header-left">
-
-					 <div class="menu">
-						  <a class="toggleMenu" href="#"><img src="images/menubutton.png" width="90%"alt="" /></a>
-                         <br>
-<br>
-                      
-						    <ul class="nav" id="nav">
-
-								<a href="index.html"><img src="images/socialmedialogo.PNG" width="10%" height="10%" alt=""/></a>
-								
-<div class="dropdown">
-									<li><a href="#"><font color="black">Shop</font></a></li>
-								  <div class="dropdown-content dropdown">
-									<a href="shop.html">Mens</a>
-									<a href="#">Womens</a>
-									<a href="#">Catalog</a>
-	</div>
-								</div>
-                                <li><a href="comingsoon.html"><font color="black">Team</font></a></li>
-<!--						 	<li><a href="comingsoon.html">Events</a></li>
-						    	<li><a href="comingsoon.html">Experiance</a></li>
--->
-                                <li><a href="comingsoon.html"><font color="black">Company</font></a></li>
-                                <li><a href="contact.html"><font color="black">Contact</font></a></li>								
-							<link rel = "shortcut icon" type = "image/png" href = "images/fav.png">	
-                                  <div class="clear"></div>
-
-
-							</ul>
-							<script type="text/javascript" src="js/responsive-nav.js"></script>
-				    </div>							
-	    		    <div class="clear"></div>
-	    	    </div>
-	            <div class="header_right">
-	    		  <!-- start search-->
-				      <!--<div class="search-box">
-							<div id="sb-search" class="sb-search">
-								<form>
-									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-									<input class="sb-search-submit" type="submit" value="">
-									<span class="sb-icon-search"> </span>
-								</form>
-							</div>
-						</div>
-						<!----search-scripts---->
-						<script src="js/classie.js"></script>
-						<script src="js/uisearch.js"></script>
-						<script>
-							new UISearch( document.getElementById( 'sb-search' ) );
-						</script>
-						<!----//search-scripts---->
-				    <!--<ul class="icon1 sub-icon1 profile_img">
-					 <li><a class="active-icon c1" href="#"> </a>
-						<ul class="sub-icon1 list">
-						  <div class="product_control_buttons">
-						  	<a href="#"><img src="images/edit.png" alt=""/></a>
-						  		<a href="#"><img src="images/close_edit.png" alt=""/></a>
-						  </div>
-						   <div class="clear"></div>
-						  <li class="list_img"><img src="images/1.jpg" alt=""/></li>
-						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
-                          $12.00</span></li>
-						  <div class="login_buttons">
-							 <div class="check_button"><a href="checkout.html">Check out</a></div>
-							 <div class="login_button"><a href="login.html">Login</a></div>
-							 <div class="clear"></div>
-						  </div>
-						  <div class="clear"></div>
-						</ul>
-					 </li>
-				   </ul>-->
-		           <div class="clear"></div>
-	       </div>
-	      </div>
-		 </div>
-	    </div>
-
- 
- 	<header class="header__main">
+  <header role="banner" class="probootstrap-header">
+    <div class="container-fluid">
+        <a href="index.html" class="probootstrap-logo"><img src=images/nobg.png width="30%"><span></span></a>
         
-  <div class="slider">
-    <svg class="slider__mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" width="0" height="0">
-        <defs>
-			
-          <!-- Slide 1 -->
-          <pattern id="bg1" patternUnits="userSpaceOnUse" width="1920" height="1080" viewBox="0 0 1920 1080">
-            <image xlink:href="images/industrial.jpg" width="100%" height="100%"/>
-          </pattern>
-          <pattern id="pattern1l" patternUnits="userSpaceOnUse" width="562" height="366" viewBox="0 0 562 366">
-				  
-            <image xlink:href="images/IanCrop.png" width="600px" height="600px"/>
+        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
+        <div class="mobile-menu-overlay"></div>
 
-          </pattern>
-          <pattern id="pattern1r" patternUnits="userSpaceOnUse" x="365px" width="562" height="366" viewBox="0 0 562 366">
-            <image xlink:href="images/1977.jpg" width="600px" height="600px"/>
-          </pattern>
-          
-          <!-- Slide 2 -->
-          <pattern id="bg2" patternUnits="userSpaceOnUse" width="1920" height="1080" viewBox="0 0 1920 1080">
-            <image xlink:href="https://images.unsplash.com/photo-1497377825569-02ad2f9edb81?dpr=1&auto=format&fit=crop&w=2000&h=2000&q=80&cs=tinysrgb&crop=&bg=" width="100%" height="100%"/>
-          </pattern>
-          <pattern id="pattern2l" patternUnits="userSpaceOnUse" width="562" height="366" viewBox="0 0 562 366">
-            <image xlink:href="images/Davidcrop.png" width="600px" height="600px"/>
-          </pattern>
-          <pattern id="pattern2r" patternUnits="userSpaceOnUse" x="365" width="562" height="366" viewBox="0 0 562 366">
-            <image xlink:href="images/IMG_3626.jpg" width="600px" height="600px"/>
-          </pattern>
-        </defs>
-      </svg>
-
-    <div class="slide" id="home">
-      <svg class="slide__bg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1920" height="1080">
-          <rect x="0" y="0" width="1920" height="1080" fill="url(#bg1)" />
-        </svg>
-      <div class="slide__images">
-        <div class="slide__image slide__image--left">
-          <svg viewBox="0 0 900 365" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
-              <path d="M 0 0 L 0 365 L 351.2382 365 L 562 0 L 0 0 Z" fill="url(#pattern1l)"/>
-            </svg>
-        </div>
-
-        <div class="slide__image slide__image--right">
-          <svg viewBox="0 0 900 365" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
-              <path d="M 900 365 L 900 0 L 548.7618 0 L 338 365 L 900 365 Z" fill="url(#pattern1r)"/>
-            </svg>
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+          <ul class="probootstrap-main-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#">Mens</a></li>
+            <li><a href="#">Womens</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <ul class="probootstrap-header-social hidden-xs">
+            <li><a href="https://www.facebook.com/savagearmor/"><i class="icon-facebook2"></i></a></li>
+            <li><a href="https://www.instagram.com/savagearmor/?hl=en"><i class="icon-instagram2"></i></a></li>
+          </ul>
+          <div class="extra-text visible-xs">
+            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+            <h5>Connect With Us</h5>
+            <ul class="social-buttons">
+              <li><a href="https://www.facebook.com/savagearmor/"><i class="icon-facebook2"></i></a></li>
+              <li><a href="https://www.instagram.com/savagearmor/?hl=en"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+  </header>
+  <!-- END: header -->
+  
+  <!-- START: section -->
+  <section class="probootstrap-intro" style="background-image: url(images/SavageArmor-30.jpg);" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 probootstrap-intro-text">
+            <h1 class="probootstrap-animate" data-animate-effect="fadeIn" style="font-family: verdana;"><span><font color="white">Savage</font></span><font color="white">Armor</font></h1>
+          <div class="probootstrap-subtitle probootstrap-animate" data-animate-effect="fadeIn">
+              <h2><font color="white">Fashion Apparel</font></h2>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="slide" id="slide-2">
-      <svg class="slide__bg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1920" height="1080">
-          <rect x="0" y="0" width="1920" height="1080" fill="url(#bg2)" />
-        </svg>
-                        <div class="slider__pagination">
-      <a href="#slide-1" class="button">Mens</a>
-      <a href="#slide-2" class="button">Womens</a>
-    </div>
-      <div class="slide__images">
-        <div class="slide__image slide__image--left">
-          <svg viewBox="0 0 900 365" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
-              <path d="M 0 0 L 0 365 L 351.2382 365 L 562 0 L 0 0 Z" fill="url(#pattern2l)"/>
-            </svg>
+    <span class="probootstrap-animate"><a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a></span>
+  </section>
+  <!-- END: section -->
+  <main>
+    <section id="next-section" class="probootstrap-section">
+      <div class="container">
+        <div class="row probootstrap-gutter60 mb50">
+          <div class="col-md-6">
+            <figure><img src="images/SavageArmor-7.jpg" lt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+          </div>
+          <div class="col-md-6">
+            <h2 class="probootstrap-heading">About Us</h2>
+            <p>The Savage Armor brand embodies a lifestyle of anyone who desires to go beyond what is expected of them. We have our unique identities during the day: students in our field, professionals at the forefront, entrepreneurs changing the world. Our dedication, perseverance, and discipline in the gym carry over to all aspects of our lives. Join the movement and reach your maximum mental, spiritual, and physical potential. We are more than fitness. <br> Look better. Lift better. Live better.</p>
+           <!-- <p><a href="#" class="btn btn-primary">Read more about me</a></p>-->
+          </div>
         </div>
 
-        <div class="slide__image slide__image--right">
-          <svg viewBox="0 0 900 365" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
-              <path d="M 900 365 L 900 0 L 548.7618 0 L 338 365 L 900 365 Z" fill="url(#pattern2r)"/>
-            </svg>
+    <!--    <div class="row probootstrap-gutter60">
+          <div class="col-md-4 mb30">
+            <h4 class="mb30">My Mission</h4>
+            <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&rdquo;</p>
+          </div>
+          <div class="col-md-4 mb30">
+            <h4 class="mb30">Upcoming Events</h4>
+            <ul class="probootstrap-blog-list">
+              <li>
+                <a href="#">
+                  <figure class="probootstrap-image"><img src="img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                  <div class="probootstrap-text">
+                    <h4>Initial into the belt and made herself</h4>
+                    <span class="meta">September, 14 2017</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure class="probootstrap-image"><img src="img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                  <div class="probootstrap-text">
+                    <h4>Far far away behind the word mountains</h4>
+                    <span class="meta">September, 14 2017</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure class="probootstrap-image"><img src="img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                  <div class="probootstrap-text">
+                    <h4>Bookmarksgrove right at the coast of the Semantics</h4>
+                    <span class="meta">September, 14 2017</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb30">
+            <h4 class="mb30">My Vision</h4>
+            <p>&ldquo;The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.&rdquo;</p>
+          </div>
         </div>
+          -->
       </div>
-    </div>
+    </section>
 
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 probootstrap-relative">
+            <h2 class="probootstrap-heading mt0 mb50">Apparel</h2>
+            <ul class="probootstrap-owl-navigation absolute right">
+              <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
+              <li><a href="#" class="probootstrap-owl-next"><i class="icon-chevron-right"></i></a></li>
+            </ul>
+          </div>
         </div>
-    </header>
-
-            <div class="row">
-            <div class="column container4">
-                <h3 style="font-size:5vw;"><font color="black">Instagram</font></h3>
+        <div class="row">
+          <div class="col-md-12 probootstrap-relative">
+            <div class="owl-carousel owl-carousel-carousel">
+              <div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="images/IanCrop1.jpg" class="img-responsive img-rounded"></a>
+                  <h3 align="center">Mens</h3>
                 </div>
-  <div class="column">
-    <img src="images/SavageArmor-7.jpg" alt="Forest" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="images/SavageArmor-21.jpg" alt="Mountains" style="width:100%">
-  </div>
-</div>
+              </div>
+              <div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="images/IMG_3626crop1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3 align="center">Womens</h3>
+                </div>
+              </div>
+              <div class="item">
+                <div class="probootstrap-program">
+                  <a href="#"><img src="img/img_3.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive img-rounded"></a>
+                  <h3>Accessories</h3>
+                  <p>Coming Soon!</p>
+                </div>
+              </div>
 
-            
-            <!--
-			<h2>Tank Tops</h2>
-		  <div class="close_but"><i class="close1"> </i></div>
-				<ul id="TankTops">
-				<li> <img src="images/Tank_Asphalt.PNG" alt=""/></li>
-				<li> <img src="images/Tank_RedTriblend.PNG" alt=""/></li>	
-					<li> <img src="images/Tank_PurpleTriblend.PNG" alt=""/></li>
-					<li> <img src="images/Tank_HeatherNavy.PNG" alt=""/></li>
-			</ul>
-			<script type="text/javascript">
-		$(window).load(function() {
-			$("#TankTops").flexisel({
-				visibleItems: 5,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,    		
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-		    	responsiveBreakpoints: { 
-		    		portrait: { 
-		    			changePoint:480,
-		    			visibleItems: 1
-		    		}, 
-		    		landscape: { 
-		    			changePoint:640,
-		    			visibleItems: 2
-		    		},
-		    		tablet: { 
-		    			changePoint:768,
-		    			visibleItems: 3
-		    		}
-		    	}
-		    });
-		    
-		});
-		</script>
-		<script type="text/javascript" src="js/jquery.flexisel.js"></script>-->
+            </div>
+          </div>
+        </div>
+      </div>
 
-	<div class="content-bottom">
-		<div class="container">
-			<div class="row content_bottom-text">
-                  <h3>SavageArmor</h3>
-				<p class="m_1" style="font-stretch: expanded">The Savage Armor brand embodies a lifestyle of anyone who desires to go beyond what is expected of them. We have our unique identities during the day: students in our field, professionals at the forefront, entrepreneurs changing the world. Our dedication, perseverance, and discipline in the gym carry over to all aspects of our lives. Join the movement and reach your maximum mental, spiritual, and physical potential. We are more than fitness. Look better. Lift better. Live better. 
-			</div>
-		</div>
-	</div>
-	<!--
-	<div class="features">
-		<div class="container">
-			<div class="main">
-			<div class="content-top">
-				<h2>T-Shirts</h2>
-				<div class="close_but"><i class="close1"> </i></div>
-					<ul id="T-Shirt">
-					<li><img src="images/board1.jpg" alt=""/></li>
-					<li><img src="images/board2.jpg" alt=""/></li>
-					<li><img src="images/board3.jpg" alt=""/></li>
-					<li><img src="images/board4.jpg" alt=""/></li>
-					<li><img src="images/board5.jpg" alt=""/></li>
-				</ul>
-				<script type="text/javascript">
-			$(window).load(function() {
-				$("#T-Shirt").flexisel({
-					visibleItems: 5,
-					animationSpeed: 1000,
-					autoPlay: true,
-					autoPlaySpeed: 3000,    		
-					pauseOnHover: true,
-					enableResponsiveBreakpoints: true,
-					responsiveBreakpoints: { 
-						portrait: { 
-							changePoint:480,
-							visibleItems: 1
-						}, 
-						landscape: { 
-							changePoint:640,
-							visibleItems: 2
-						},
-						tablet: { 
-							changePoint:768,
-							visibleItems: 3
-						}
-					}
-				});
+  </main>
+  <footer class="probootstrap-footer">
+      <div class="probootstrap-backtotop"><a href="#" class="js-backtotop"><i class="icon-chevron-thin-up"></i></a></div>
+      <div class="container">
+      <div class="row mb50">
+        <div class="col-md-3">
+ <div class="probootstrap-footer-widget">
+            <h4>Links</h4>
+            <ul class="probootstrap-footer-link float">
+              <li><a href="#">Home</a></li>
+              <li><a href="https://www.facebook.com/savagearmor/">Facebook</a></li>
+              <li><a href="https://www.instagram.com/savagearmor/?hl=en">Instagram</a></li>
+            </ul>
+            <ul class="probootstrap-footer-link float">
+              <li><a href="#">Mens</a></li>
+              <li><a href="#">Womens</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+     <!--
+            <ul class="probootstrap-footer-link float">
+              <li><a href="#">About Me</a></li>
+              <li><a href="#">Join The Club</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+-->
+          </div>
+        </div>
+        <div class="col-md-3 col-md-push-1">
 
-			});
-			</script>
-		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
-		</div>
-			</div>
-	</div>
-	    </div>
-	-->
-	  <div class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<ul class="footer_box">
-                            <h4><font color="black">Products</font></h4>
-                            <li><a href="#"><font color="black">Mens</font></a></li>
-                            <li><a href="#"><font color="black">Womens</font></a></li>
-                            <li><a href="#"><font color="black">Catalog</font></a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-                            <h4><font color="black">About</font></h4>
-                            <li><a href="#"><font color="black">Team</font></a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
+        </div>
+        <div class="col-md-5 col-md-push-1">
+         
+          <div class="probootstrap-footer-widget">
+            <h4>Contact Info</h4>
+            <ul class="probootstrap-contact-info">
+              <li><i class="icon-location2"></i> <span>800 W Campbell Rd, Richardson, TX 75080</span></li>
+              <li><i class="icon-mail"></i><span>savagearmorbrand@gmail.com</span></li>
+              <li><i class="icon-phone2"></i><span>4253190850</span></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+       <div class="row">
+         <div class="col-md-12 text-center border-top">
+           <p class="mb0">&copy; Copyright 2019 <a href="https://savagearmorbrand.com/">savagearmorbrand.com</a>. All Rights Reserved. <br> </p>
+         </div>
+       </div>
+     </div>
+  </footer>  
 
-                            <h4><font color="black">Support</font></h4>
-                            <li><a href="contact.html"><font color="black">Contact Us</font></a></li>
+  <script src="js/scripts.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/custom.js"></script>
 
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<ul class="social">	
-							  <li class="facebook"><a href="https://www.facebook.com/savagearmor/?ref=br_rs"><span> </span></a></li>
-							  <li class="instagram"><a href="https://www.instagram.com/savagearmor/?hl=en"><span> </span></a></li>	
-							  <li class="youtube"><a href="https://www.youtube.com/channel/UCPKvzhgP4RsscPVNAEJC0hA?view_as=subscriber"><span> </span></a></li>										  				
-						    </ul>
-		   				</ul>
-					</div>
-				</div>
-				<div class="row footer_bottom">
-
-   				</div>
-			</div>
-		</div>
-</body>	
+  </body>
 </html>
