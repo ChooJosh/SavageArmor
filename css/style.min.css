@@ -301,7 +301,7 @@ a.hover-reverse:active,a.hover-reverse:focus,a.hover-reverse:hover{
 	visibility:hidden
 }
 .probootstrap-intro .probootstrap-intro-text{
-	margin-top:400px
+	margin-top:400px;
 }
 @media screen and (max-width:768px){
 	.probootstrap-intro{

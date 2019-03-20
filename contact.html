@@ -1,197 +1,186 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Savage Armor</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript">
-        $(document).ready(function() {
-            $(".dropdown img.flag").addClass("flagvisibility");
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>uiCookies:Trainer &mdash; Free Bootstrap Theme, Free Responsive Bootstrap Website Template</title>
+    <meta name="description" content="Free Bootstrap Theme by uicookies.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+    
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Rubik:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 
-            $(".dropdown dt a").click(function() {
-                $(".dropdown dd ul").toggle();
-            });
-                        
-            $(".dropdown dd ul li a").click(function() {
-                var text = $(this).html();
-                $(".dropdown dt a span").html(text);
-                $(".dropdown dd ul").hide();
-                $("#result").html("Selected value is: " + getSelectedValue("sample"));
-            });
-                        
-            function getSelectedValue(id) {
-                return $("#" + id).find("dt a span.value").html();
-            }
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
 
-            $(document).bind('click', function(e) {
-                var $clicked = $(e.target);
-                if (! $clicked.parents().hasClass("dropdown"))
-                    $(".dropdown dd ul").hide();
-            });
+  <!-- START: header -->
 
+  <header role="banner" class="probootstrap-header">
+    <div class="container-fluid">
+        <a href="index.html" class="probootstrap-logo">Trainer<span>.</span></a>
+        
+        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
+        <div class="mobile-menu-overlay"></div>
 
-            $("#flagSwitcher").click(function() {
-                $(".dropdown img.flag").toggleClass("flagvisibility");
-            });
-        });
-     </script>
- </head>
-<body>
-	<div class="header">
-		<div class="container">
-			<div class="row">
-			  <div class="col-md-12">
-				 <div class="header-left">
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+          <ul class="probootstrap-main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
+          </ul>
+          <ul class="probootstrap-header-social hidden-xs">
+            <li><a href="#"><i class="icon-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-facebook2"></i></a></li>
+            <li><a href="#"><i class="icon-instagram2"></i></a></li>
+          </ul>
+          <div class="extra-text visible-xs">
+            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+            <h5>Connect With Me</h5>
+            <ul class="social-buttons">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook2"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+  </header>
+  <!-- END: header -->
+  
+  <!-- START: section -->
+  <section class="probootstrap-intro probootstrap-intro-inner" style="background-image: url(img/hero_bg_1_b.jpg);" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 probootstrap-intro-text">
+          <h1 class="probootstrap-animate" data-animate-effect="fadeIn">Contact</h1>
+          <div class="probootstrap-subtitle probootstrap-animate" data-animate-effect="fadeIn">
+            <h2>Free Template by <a href="https://uicookies.com">uicookies.com</a></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="probootstrap-animate"><a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a></span>
+  </section>
+  <!-- END: section -->
+  <main>
+    <section id="next-section" class="probootstrap-section">
+      <div class="container">
+        <div class="col-md-6">
+            <form action="#" method="post" class="probootstrap-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" class="form-control" id="fname" name="fname">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="form-control" id="lname" name="lname">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Message">
+              </div>
+            </form>
+          </div>
+          <div class="col-md-5 col-md-push-1">
+            <h3 class="mt0">Get In Touch</h3>
+            <ul class="probootstrap-contact-info">
+              <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
+              <li><i class="icon-mail"></i><span>info@domain.com</span></li>
+              <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
+            </ul>
 
-					 <div class="menu">
-						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
-						    <ul class="nav" id="nav">
-														<a href="index.html"><img src="images/SavageArmorInstagramBlack.png" height="10%" width="10%" alt=""/></a>
-						    	<li><a href="comingsoon.html">Shop</a></li>
-						    	<li><a href="comingsoon.html">Team</a></li>
-						    	<li><a href="comingsoon.html">Company</a></li>
-								<li class="current"><a href="contact.html">Contact</a></li>								
-								<div class="clear"></div>
-							</ul>
-							<script type="text/javascript" src="js/responsive-nav.js"></script>
-				    </div>							
-	    		    <div class="clear"></div>
-	    	    </div>
-	            <div class="header_right">
-	    		  <!-- start search-->
-				   <div class="search-box">
-							<div id="sb-search" class="sb-search">
-								<form>
-									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-									<input class="sb-search-submit" type="submit" value="">
-									<span class="sb-icon-search"> </span>
-								</form>
-							</div>
-						</div>
-						<!----search-scripts---->
-						<script src="js/classie.js"></script>
-						<script src="js/uisearch.js"></script>
-						<script>
-							new UISearch( document.getElementById( 'sb-search' ) );
-						</script>
-				    <ul class="icon1 sub-icon1 profile_img">
-					 <li><a class="active-icon c1" href="#"> </a>
-						<ul class="sub-icon1 list">
-						  <div class="product_control_buttons">
-						  	<a href="#"><img src="images/edit.png" alt=""/></a>
-						  		<a href="#"><img src="images/close_edit.png" alt=""/></a>
-						  </div>
-						   <div class="clear"></div>
-						  <li class="list_img"><img src="images/1.jpg" alt=""/></li>
-						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
-                          $12.00</span></li>
-						  <div class="login_buttons">
-							 <div class="check_button"><a href="checkout.html">Check out</a></div>
-							 <div class="login_button"><a href="login.html">Login</a></div>
-							 <div class="clear"></div>
-						  </div>
-						  <div class="clear"></div>
-						</ul>
-					 </li>
-				   </ul>
-		        <div class="clear"></div>
-	       </div>
-	      </div>
-		 </div>
-	    </div>
-	  </div>
-     <div class="main">
-      <div class="shop_top">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-7">
-				  <div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.9655009797243!2d-96.75063978508366!3d32.97831198091174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c21fd7dc00f33%3A0x268ff4d03bc2d93a!2s800+W+Campbell+Rd%2C+Richardson%2C+TX+75080!5e0!3m2!1sen!2sus!4v1544816584149" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color:#666;text-align:left;font-size:12px"></a></small>
-				  </div>
-				</div>
-				<div class="col-md-5">
-					<p class="m_8">Please contact us for any inquiries you might have. We look forward to hearing from you!</p>
-					<div class="address">
-				                <p>800 W. Campbell Road</p>
-						   		<p>Richardson, Texas 75080</p>
-						   		<p>USA</p>
-				   		<p>Phone:(214) 797 5858</p>
-				 	 	<p>Email: <span>savagearmorbrand@gmail.com</span></p>
-				   		<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
-				   </div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 contact">
-				  <form method="post" action="contact-post.html">
-					<div class="to">
-                     	<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-					 	<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-					 	<input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
-					</div>
-					<div class="text">
-	                   <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
-	                   <div class="form-submit">
-			           <input name="submit" type="submit" id="submit" value="Submit"><br>
-			           </div>
-	                </div>
-	                <div class="clear"></div>
-                   </form>
-			     </div>
-		    </div>
-	     </div>
-	   </div>
-	  </div>
-	  <div class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Products</h4>
-							<li><a href="#">Tank Tops</a></li>
-							<li><a href="#">T-Shirts</a></li>
-							<li><a href="#">Long Sleeves</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>About</h4>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Catalog</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Customer Support</h4>
-							<li><a href="#">Contact Us</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
+            <h3>Feedback</h3>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
+      </div>
+    </section>
+    
+  </main>
+  <footer class="probootstrap-footer">
+      <div class="probootstrap-backtotop"><a href="#" class="js-backtotop"><i class="icon-chevron-thin-up"></i></a></div>
+      <div class="container">
+      <div class="row mb50">
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4>About The Site</h4>
+            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli. <a href="#">Learn More</a></p>
+          </div>
+        </div>
+        <div class="col-md-3 col-md-push-1">
+          <div class="probootstrap-footer-widget">
+            <h4>Gym Hours</h4>
+            <ul class="probootstrap-footer-link">
+              <li>Week Days: 05:00 – 22:00</li>
+              <li>Saturday: CLOSED</li>
+              <li>Sunday: 05:00 - 22:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-5 col-md-push-1">
+          <div class="probootstrap-footer-widget">
+            <h4>Links</h4>
+            <ul class="probootstrap-footer-link float">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Gallery</a></li>
+            </ul>
+            <ul class="probootstrap-footer-link float">
+              <li><a href="#">About Me</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+            <ul class="probootstrap-footer-link float">
+              <li><a href="#">About Me</a></li>
+              <li><a href="#">Join The Club</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="probootstrap-footer-widget">
+            <h4>Contact Info</h4>
+            <ul class="probootstrap-contact-info">
+              <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
+              <li><i class="icon-mail"></i><span>info@domain.com</span></li>
+              <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+       <div class="row">
+         <div class="col-md-12 text-center border-top">
+           <p class="mb0">&copy; Copyright 2017 <a href="https://uicookies.com/">uiCookies:Trainer</a>. All Rights Reserved. <br> Designed by <a href="https://uicookies.com">uicookies.com</a> Demo Images Unsplash.com &amp; Pexels.com</p>
+         </div>
+       </div>
+     </div>
+  </footer>  
 
-							<ul class="social">	
-							  <li class="facebook"><a href="https://www.facebook.com/savagearmor/?ref=br_rs"><span> </span></a></li>
-							  <li class="instagram"><a href="https://www.instagram.com/savagearmor/?hl=en"><span> </span></a></li>	
-							  <li class="youtube"><a href="https://www.youtube.com/channel/UCPKvzhgP4RsscPVNAEJC0hA?view_as=subscriber"><span> </span></a></li>										  				
-						    </ul>
-		   				</ul>
-					</div>
-				</div>
-				<div class="row footer_bottom">
-
-   				</div>
-			</div>
-		</div>
-</body>	
+  <script src="js/scripts.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/custom.js"></script>
+  </body>
 </html>
