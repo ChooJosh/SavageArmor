@@ -132,14 +132,15 @@ div.container4 h3 {
 @import url("https://fonts.googleapis.com/css?family=Montserrat:600");
 .header__main {
   position: relative;
-  min-height: 70vh;
+  max-height: 70vh;
   overflow: hidden;
   text-align: left;
+    height:70vh;
 }
 
 .slider {
-  width: 20vw;
-  height: 70vh;
+  width: 100%;
+  height: auto;
     margin-top: -2%;
 }
 
@@ -149,7 +150,8 @@ div.container4 h3 {
   align-items: center;
   position: absolute;
   width: 100%;
-    
+  height: auto;
+
 }
 .slide:target .slide__bg {
   opacity: 1;
@@ -175,6 +177,7 @@ div.container4 h3 {
   opacity: 0;
   transition: opacity 1s ease;
   will-change: opacity;
+
 }
 
 .slide__images {
@@ -190,11 +193,12 @@ div.container4 h3 {
 
 
 .slide__image {
-    background-size: contain !important;
+
   position: absolute;
   display: block;
   margin: 0 auto;
   width: 100%;
+  height:auto;    
   opacity: 0;
   transition: all 0.5s ease-in-out 0s;
   -webkit-filter: blur(10px) drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.35));
@@ -265,13 +269,27 @@ top:80%;
 .imgButton{
     text-align: center;
 }
+
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+    height:auto;
+}
+
 html,body
 {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 body a{
  	transition: 0.5s all;
@@ -283,6 +301,7 @@ body a{
 	background:white;
 	padding: 1.5% 0;
 }
+
 .header-left{
 	float:left;
 	width: 59%;
@@ -799,7 +818,7 @@ li.list_desc h4 a:hover{
 .nbs-flexisel-item > img {
 	width:100%;
 	cursor: pointer;
-	positon: relative;
+	position: relative;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	max-width:210px;
@@ -843,8 +862,8 @@ li.list_desc h4 a:hover{
 }
 p.m_1{
 	color: #FFF;
-	font-size: 1em;
-	line-height: 2.2em;
+	font-size: 2vw;
+	line-height: vm;
 	margin-bottom:6%;
 }
 p.m_2{
