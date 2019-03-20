@@ -1,217 +1,381 @@
-<!DOCTYPE html>
-<html >
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Exploring UI Animation #2</title>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<title>SavageArmor</title>
+<link rel = "shortcut icon" type = "image/png" href = "images/fav.png">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/jquery.easydropdown.js"></script>-->
+<!--start slider -->
+<link rel="stylesheet" href="css/fwslider.css" media="all">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/fwslider.js"></script>
+<!--end slider -->
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
 
-  
-      <link rel="stylesheet" href="css/style.css">
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
 
-  
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 1%;
+justify-content: center;
+    display: block;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
 </head>
-
 <body>
-  <svg id="icons" xmlns="http://www.w3.org/2000/svg">  
-<symbol id="icon-arrow" viewBox="0 0 476.213 476.213" >
-<polygon fill="inherit" points="347.5,324.393 253.353,418.541 253.353,0 223.353,0 223.353,419.033 128.713,324.393 107.5,345.607 
-	238.107,476.213 368.713,345.606 "/>
-</symbol>
-</svg>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/menubutton.png" width="90%"alt="" /></a>
+                         <br>
+<br>
+                      
+						    <ul class="nav" id="nav">
+
+								<a href="index.html"><img src="images/socialmedialogo.PNG" width="10%" height="10%" alt=""/></a>
+								
+<div class="dropdown">
+									<li><a href="#"><font color="black">Shop</font></a></li>
+								  <div class="dropdown-content dropdown">
+									<a href="shop.html">Mens</a>
+									<a href="#">Womens</a>
+									<a href="#">Catalog</a>
+	</div>
+								</div>
+                                <li><a href="comingsoon.html"><font color="black">Team</font></a></li>
+<!--						 	<li><a href="comingsoon.html">Events</a></li>
+						    	<li><a href="comingsoon.html">Experiance</a></li>
+-->
+                                <li><a href="comingsoon.html"><font color="black">Company</font></a></li>
+                                <li><a href="contact.html"><font color="black">Contact</font></a></li>								
+							<link rel = "shortcut icon" type = "image/png" href = "images/fav.png">	
+                                  <div class="clear"></div>
 
 
-<div class="slider-content">
-  
-  <div class="header-wrapper">
-    <div class="header">
-      <div class="menu-wrapper">
-<nav role="navigation">
-  <div id="menuToggle">
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+	    		  <!-- start search-->
+				      <!--<div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+						<!----search-scripts---->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+						<!----//search-scripts---->
+				    <!--<ul class="icon1 sub-icon1 profile_img">
+					 <li><a class="active-icon c1" href="#"> </a>
+						<ul class="sub-icon1 list">
+						  <div class="product_control_buttons">
+						  	<a href="#"><img src="images/edit.png" alt=""/></a>
+						  		<a href="#"><img src="images/close_edit.png" alt=""/></a>
+						  </div>
+						   <div class="clear"></div>
+						  <li class="list_img"><img src="images/1.jpg" alt=""/></li>
+						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
+                          $12.00</span></li>
+						  <div class="login_buttons">
+							 <div class="check_button"><a href="checkout.html">Check out</a></div>
+							 <div class="login_button"><a href="login.html">Login</a></div>
+							 <div class="clear"></div>
+						  </div>
+						  <div class="clear"></div>
+						</ul>
+					 </li>
+				   </ul>-->
+		           <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
 
-    <input type="checkbox" />
+ 
+ 	<header class="header__main">
+        
+  <div class="slider">
+    <svg class="slider__mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" width="0" height="0">
+        <defs>
+			
+          <!-- Slide 1 -->
+          <pattern id="bg1" patternUnits="userSpaceOnUse" width="1920" height="1080" viewBox="0 0 1920 1080">
+            <image xlink:href="images/industrial.jpg" width="100%" height="100%"/>
+          </pattern>
+          <pattern id="pattern1l" patternUnits="userSpaceOnUse" width="562" height="366" viewBox="0 0 562 366">
+				  
+            <image xlink:href="images/IanCrop.png" width="600px" height="600px"/>
 
-    <span></span>
-    <span></span>
-    <span></span>
+          </pattern>
+          <pattern id="pattern1r" patternUnits="userSpaceOnUse" x="365px" width="562" height="366" viewBox="0 0 562 366">
+            <image xlink:href="images/1977.jpg" width="600px" height="600px"/>
+          </pattern>
+          
+          <!-- Slide 2 -->
+          <pattern id="bg2" patternUnits="userSpaceOnUse" width="1920" height="1080" viewBox="0 0 1920 1080">
+            <image xlink:href="https://images.unsplash.com/photo-1497377825569-02ad2f9edb81?dpr=1&auto=format&fit=crop&w=2000&h=2000&q=80&cs=tinysrgb&crop=&bg=" width="100%" height="100%"/>
+          </pattern>
+          <pattern id="pattern2l" patternUnits="userSpaceOnUse" width="562" height="366" viewBox="0 0 562 366">
+            <image xlink:href="images/Davidcrop.png" width="600px" height="600px"/>
+          </pattern>
+          <pattern id="pattern2r" patternUnits="userSpaceOnUse" x="365" width="562" height="366" viewBox="0 0 562 366">
+            <image xlink:href="images/IMG_3626.jpg" width="600px" height="600px"/>
+          </pattern>
+        </defs>
+      </svg>
 
-    <ul id="menu">
-      <a href="#"><li>Home</li></a>
-      <a href="#"><li>About</li></a>
-      <a href="#"><li>Info</li></a>
-      <a href="#"><li>Contact</li></a>
-      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-    </ul>
-  </div>
-</nav>
-      </div>
-      <div class="logo-wrapper">
-          <p style="text-align:center;"><img src="images/socialmedialogo.PNG" width="20%" alt="Logo"></p>
-      </div>
-      <div class="shop-wrapper"></div>
-    </div>
-  </div>
-  
-  <div class="number-wrapper">
-    <div class="number-count">
-      <div class="number">01</div>
-    </div>
-  </div>
-  
-  <div class="nav-wrapper">
-    <div class="nav-arrows">
-      <div class="nav-up">
-           <svg id="arrow-up">
-            <use xlink:href="#icon-arrow"></use>
-          </svg>
-       </div>
-      <div class="nav-line"></div>
-      <div class="nav-down">
-         <svg id="arrow-down">
-            <use xlink:href="#icon-arrow"></use>
-          </svg>
-      </div>
-    </div>
-  </div>
-  
-  <div class="slider-wrapper">
-    <div class="slider-container">                       
-      <div class="slide active" data-order="1">
-          <div class="slide-content txt">
-            <div class="txt-wrapper">
-              <span class="copy">Intro about me</span>
-              <h2><span>Hello!</span> I’m Mr.Bara</h2>
-              <span class="subtitle">Fashion designer</span>
-              <p class="excerpt">I combine the best of our skills and ideas to present you products really worth your attention that will change the way you think about design, structure, color and website itself. </p>
-            </div>
-          </div>
-          <div class="slide-content img">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/slider1.jpg" alt="" />
-          </div>
-        </div>  
-      <div class="slide" data-order="2">
-          <div class="slide-content txt">
-            <div class="txt-wrapper">
-              <span class="copy">Show with me</span>
-              <h2><span>Love Simple</span> Fashion</h2>
-               <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-               <button>Shop now</button>
-            </div>
-          </div>
-          <div class="slide-content img">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/slide2.jpg" alt="" />
-          </div>
-        </div>  
-      <div class="slide " data-order="3">
-          <div class="slide-content txt">
-            <div class="txt-wrapper">
-              <span class="copy">Fashion around me</span>
-              <ul>
-                <li>
-                  <div class="date-wrapper">
-                    <div class="date">25</div>
-                    <div class="month">April</div>
-                  </div>
-                  <div class="post-wrapper">
-                    <div class="post-title"><a href="">Top colour pantone for fashion 2016</a></div>
-                    <div class="post-info"> 
-                      <ul>
-                        <li>Admin /</li>
-                        <li>Discovery /</li>
-                        <li>15 comments</li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="date-wrapper">
-                    <div class="date">18</div>
-                    <div class="month">April</div>
-                  </div>
-                  <div class="post-wrapper">
-                    <div class="post-title"><a href="">Inspiration for fashion for Logan's designer</a></div>
-                    <div class="post-info"> 
-                      <ul>
-                        <li>Admin /</li>
-                        <li>Inspirations /</li>
-                        <li>08 comments</li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="date-wrapper">
-                    <div class="date">06</div>
-                    <div class="month">April</div>
-                  </div>
-                  <div class="post-wrapper">
-                    <div class="post-title"><a href="">Hipster -Fashion trand this summer</a></div>
-                    <div class="post-info"> 
-                      <ul>
-                        <li>Admin /</li>
-                        <li>Discovery /</li>
-                        <li>22 comments</li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <span class="view-all">View all articles</span> 
-             
-            </div>
-          </div>
-          <div class="slide-content img">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/slide3.jpg" alt="" />
-          </div>
+    <div class="slide" id="slide-1">
+      <svg class="slide__bg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1920" height="1080">
+          <rect x="0" y="0" width="1920" height="1080" fill="url(#bg1)" />
+        </svg>
+      <div class="slide__images">
+        <div class="slide__image slide__image--left">
+          <svg viewBox="0 0 900 365" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+              <path d="M 0 0 L 0 365 L 351.2382 365 L 562 0 L 0 0 Z" fill="url(#pattern1l)"/>
+            </svg>
         </div>
-      <div class="slide " data-order="4">
-          <div class="slide-content txt">
-            <div class="txt-wrapper">
-              <span class="copy">What clients say</span>
-              <h2><span>Mr.Bara</span> Best Choice </h2>
-              <p class="excerpt">I combine the best of our skills and ideas to present you products really worth your attention that will change the way you think about design, structure, color and website itself. </p>
-            </div>
-          </div>
-          <div class="slide-content img">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/slide4.jpg" alt="" />
-          </div>
+
+        <div class="slide__image slide__image--right">
+          <svg viewBox="0 0 900 365" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+              <path d="M 900 365 L 900 0 L 548.7618 0 L 338 365 L 900 365 Z" fill="url(#pattern1r)"/>
+            </svg>
         </div>
-      <div class="slide " data-order="5">
-          <div class="slide-content txt">
-            <div class="txt-wrapper">
-              <span class="copy">Keep in touch</span>
-              <h3>Melbourne, <span>Australia</span></h3>
-              <p class="excerpt">269 King Str, 05th Floor, Utral House Building. Melbourne. VIC 3000. Australia</p>
-              <p><strong>Email:</strong> <a href="mailto:mariosm18@gmail.com">mariosm18@gmail.com</a></p>
-              <p>Call directly: <span class="phone">+99 (0) 344 956 4050</span></p>
-            </div>
-          </div>
-          <div class="slide-content img">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/42764/slide5.jpg" alt="" />
-          </div>
-        </div>
+      </div>
     </div>
+
+    <div class="slide" id="slide-2">
+      <svg class="slide__bg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1920" height="1080">
+          <rect x="0" y="0" width="1920" height="1080" fill="url(#bg2)" />
+        </svg>
+                        <div class="slider__pagination">
+      <a href="#slide-1" class="button">Mens</a>
+      <a href="#slide-2" class="button">Womens</a>
+    </div>
+      <div class="slide__images">
+        <div class="slide__image slide__image--left">
+          <svg viewBox="0 0 900 365" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+              <path d="M 0 0 L 0 365 L 351.2382 365 L 562 0 L 0 0 Z" fill="url(#pattern2l)"/>
+            </svg>
+        </div>
+
+        <div class="slide__image slide__image--right">
+          <svg viewBox="0 0 900 365" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+              <path d="M 900 365 L 900 0 L 548.7618 0 L 338 365 L 900 365 Z" fill="url(#pattern2r)"/>
+            </svg>
+        </div>
+      </div>
+    </div>
+
+        </div>
+    </header>
+
+            <div class="row">
+            <div class="column container4">
+                <h3 style="font-size:5vw;"><font color="black">Instagram</font></h3>
+                </div>
+  <div class="column">
+    <img src="images/SavageArmor-7.jpg" alt="Forest" style="width:100%">
   </div>
-  <div class="footer">
-    <div class="social-wrapper">
-      <ul>
-        <li><a href="">Codepen</a></li>
-        <li><a href="">Dribbble</a></li>
-        <li><a href="">Behance</a></li>
-      </ul>
-    </div>
-    <div class="language-wrapper">
-      <ul>
-        <li><a href="">EN</a></li>
-        <li><a href="">ES</a></li>
-      </ul>
-    </div>
+  <div class="column">
+    <img src="images/SavageArmor-21.jpg" alt="Mountains" style="width:100%">
   </div>
 </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
 
-    <script src="js/index.js"></script>
+            
+            <!--
+			<h2>Tank Tops</h2>
+		  <div class="close_but"><i class="close1"> </i></div>
+				<ul id="TankTops">
+				<li> <img src="images/Tank_Asphalt.PNG" alt=""/></li>
+				<li> <img src="images/Tank_RedTriblend.PNG" alt=""/></li>	
+					<li> <img src="images/Tank_PurpleTriblend.PNG" alt=""/></li>
+					<li> <img src="images/Tank_HeatherNavy.PNG" alt=""/></li>
+			</ul>
+			<script type="text/javascript">
+		$(window).load(function() {
+			$("#TankTops").flexisel({
+				visibleItems: 5,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,    		
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+		    	responsiveBreakpoints: { 
+		    		portrait: { 
+		    			changePoint:480,
+		    			visibleItems: 1
+		    		}, 
+		    		landscape: { 
+		    			changePoint:640,
+		    			visibleItems: 2
+		    		},
+		    		tablet: { 
+		    			changePoint:768,
+		    			visibleItems: 3
+		    		}
+		    	}
+		    });
+		    
+		});
+		</script>
+		<script type="text/javascript" src="js/jquery.flexisel.js"></script>-->
 
-</body>
+	<div class="content-bottom">
+		<div class="container">
+			<div class="row content_bottom-text">
+                  <h3>SavageArmor</h3>
+				<p class="m_1" style="font-stretch: expanded">The Savage Armor brand embodies a lifestyle of anyone who desires to go beyond what is expected of them. We have our unique identities during the day: students in our field, professionals at the forefront, entrepreneurs changing the world. Our dedication, perseverance, and discipline in the gym carry over to all aspects of our lives. Join the movement and reach your maximum mental, spiritual, and physical potential. We are more than fitness. Look better. Lift better. Live better. 
+			</div>
+		</div>
+	</div>
+	<!--
+	<div class="features">
+		<div class="container">
+			<div class="main">
+			<div class="content-top">
+				<h2>T-Shirts</h2>
+				<div class="close_but"><i class="close1"> </i></div>
+					<ul id="T-Shirt">
+					<li><img src="images/board1.jpg" alt=""/></li>
+					<li><img src="images/board2.jpg" alt=""/></li>
+					<li><img src="images/board3.jpg" alt=""/></li>
+					<li><img src="images/board4.jpg" alt=""/></li>
+					<li><img src="images/board5.jpg" alt=""/></li>
+				</ul>
+				<script type="text/javascript">
+			$(window).load(function() {
+				$("#T-Shirt").flexisel({
+					visibleItems: 5,
+					animationSpeed: 1000,
+					autoPlay: true,
+					autoPlaySpeed: 3000,    		
+					pauseOnHover: true,
+					enableResponsiveBreakpoints: true,
+					responsiveBreakpoints: { 
+						portrait: { 
+							changePoint:480,
+							visibleItems: 1
+						}, 
+						landscape: { 
+							changePoint:640,
+							visibleItems: 2
+						},
+						tablet: { 
+							changePoint:768,
+							visibleItems: 3
+						}
+					}
+				});
+
+			});
+			</script>
+		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+		</div>
+			</div>
+	</div>
+	    </div>
+	-->
+	  <div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+                            <h4><font color="black">Products</font></h4>
+                            <li><a href="#"><font color="black">Mens</font></a></li>
+                            <li><a href="#"><font color="black">Womens</font></a></li>
+                            <li><a href="#"><font color="black">Catalog</font></a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+                            <h4><font color="black">About</font></h4>
+                            <li><a href="#"><font color="black">Team</font></a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+
+                            <h4><font color="black">Support</font></h4>
+                            <li><a href="contact.html"><font color="black">Contact Us</font></a></li>
+
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<ul class="social">	
+							  <li class="facebook"><a href="https://www.facebook.com/savagearmor/?ref=br_rs"><span> </span></a></li>
+							  <li class="instagram"><a href="https://www.instagram.com/savagearmor/?hl=en"><span> </span></a></li>	
+							  <li class="youtube"><a href="https://www.youtube.com/channel/UCPKvzhgP4RsscPVNAEJC0hA?view_as=subscriber"><span> </span></a></li>										  				
+						    </ul>
+		   				</ul>
+					</div>
+				</div>
+				<div class="row footer_bottom">
+
+   				</div>
+			</div>
+		</div>
+</body>	
 </html>
