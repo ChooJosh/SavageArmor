@@ -1586,7 +1586,7 @@ a.hover-reverse:active,a.hover-reverse:focus,a.hover-reverse:hover{
 	overflow:hidden
 }
 .owl-carousel .owl-controls,.owl-carousel-posts .owl-controls{
-	margin-top:0
+	margin-top:50px
 }
 .owl-carousel .owl-controls .owl-nav .owl-next,.owl-carousel .owl-controls .owl-nav .owl-prev,.owl-carousel-posts .owl-controls .owl-nav .owl-next,.owl-carousel-posts .owl-controls .owl-nav .owl-prev{
 	top:50%;
