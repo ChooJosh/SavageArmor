@@ -1578,7 +1578,7 @@ a.hover-reverse:active,a.hover-reverse:focus,a.hover-reverse:hover{
 	cursor:default
 }
 .owl-carousel{
-	margin-bottom:100px
+	margin-bottom:10px
 }
 .owl-carousel.border-rounded .item{
 	border:1px solid rgba(0,0,0,.1);
@@ -1853,4 +1853,15 @@ a.hover-reverse:active,a.hover-reverse:focus,a.hover-reverse:hover{
 		float:none;
 		width:100%
 }
+}
+
+.fblogo {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: auto;
+}
+#images{
+   text-align:center;
 }
