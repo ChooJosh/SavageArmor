@@ -143,7 +143,9 @@
 
 		var owl1 = $('.owl-carousel-carousel'),
 			 	owl2 = $('.owl-carousel-carousel2'),
-			 	owl3 = $('.owl-carousel-carousel3');
+			 	owl3 = $('.owl-carousel-carousel3'),
+                owl4 = $('.owl-carousel-carousel4'),
+                owl5 = $('.owl-carousel-carousel5');
 		owl1.owlCarousel({
 			items: 3,
 			loop: true,
@@ -227,6 +229,62 @@
 	        }
 	    	}
 		});
+        owl4.owlCarousel({
+			items: 3,
+			loop: true,
+			margin: 20,
+			nav: false,
+			dots: false,
+			smartSpeed: 800,
+			autoHeight: true,
+			navText: [
+		      "<i class='icon-keyboard_arrow_left owl-direction'></i>",
+		      "<i class='icon-keyboard_arrow_right owl-direction'></i>"
+	     	],
+	     	responsive:{
+	        0:{
+	            items:1
+	        },
+	        400:{
+	            items:1
+	        },
+	        600:{
+	            items:2
+	        },
+	        1000:{
+	            items:3
+	        }
+	    	}
+		});
+        owl5.owlCarousel({
+			items: 3,
+			loop: true,
+			margin: 20,
+			nav: false,
+			dots: false,
+			smartSpeed: 800,
+			autoHeight: true,
+			navText: [
+		      "<i class='icon-keyboard_arrow_left owl-direction'></i>",
+		      "<i class='icon-keyboard_arrow_right owl-direction'></i>"
+	     	],
+	     	responsive:{
+	        0:{
+	            items:1
+	        },
+	        400:{
+	            items:1
+	        },
+	        600:{
+	            items:2
+	        },
+	        1000:{
+	            items:3
+	        }
+	    	}
+		});
+
+
 
 
 		// Custom Navigation Events
@@ -256,6 +314,26 @@
 		});
 		$('.probootstrap-owl-prev3').click(function(e){
 		  owl3.trigger('prev.owl.carousel');
+		  e.preventDefault();
+		});
+        
+        		// Custom Navigation Events
+		$('.probootstrap-owl-next4').click(function(e){
+		  owl4.trigger('next.owl.carousel');
+		  e.preventDefault();
+		});
+		$('.probootstrap-owl-prev4').click(function(e){
+		  owl4.trigger('prev.owl.carousel');
+		  e.preventDefault();
+		});
+        
+        		// Custom Navigation Events
+		$('.probootstrap-owl-next5').click(function(e){
+		  owl5.trigger('next.owl.carousel');
+		  e.preventDefault();
+		});owl5
+		$('.probootstrap-owl-prev5').click(function(e){
+		  owl5.trigger('prev.owl.carousel');
 		  e.preventDefault();
 		});
 
