@@ -1865,3 +1865,13 @@ a.hover-reverse:active,a.hover-reverse:focus,a.hover-reverse:hover{
 #images{
    text-align:center;
 }
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s; 
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+}
